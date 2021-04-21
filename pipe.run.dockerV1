@@ -1,0 +1,9 @@
+node {
+        docker.image('nginx:latest').withRun('-p 800:80') { c ->
+
+        sh 'docker ps'
+
+        sh 'curl 172.30.0.1:800'
+
+    }
+}
